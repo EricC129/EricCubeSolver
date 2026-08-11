@@ -13,21 +13,32 @@ public class CubeScrambler {
 
 	protected String randomScrambleMove() {
 		//TODO declare an int called randomIndex and assign to it a random value between 0 and 17
-		int randomIndex = ;//TODO assign a random value between 0 and 17 using Math.random(), and casting to int with (int)
+		int randomIndex = (int)(18*Math.random());//TODO assign a random value between 0 and 17 using Math.random(), and casting to int with (int)
 		return POSSIBLE_MOVES[randomIndex];
 	}
 
 	protected char getFace(String move) {
+		return move.charAt(0);
 		//TODO return as a char which face is turned for a given move, i.e. return the first character of the String move
 	}
 
 	public String[] getScramble(int numMoves) {
 		//TODO generate a random scramble with numMoves moves
 		//TODO ensure that no repetition of the turns with the same face, because that could be simplified into one turn
+		String[] scramble = new String[numMoves];
+		scramble[0] = randomScrambleMove();
 
-
-
-
+		char previousFaceTurned;
+		String currentMove;
+		for(int i = 0;i < numMoves; i++){
+			previousFaceTurned = getFace(scramble[i - 1]);
+			currentMove = randomScrambleMove();
+			while(getFace(currentMove)==previousFaceTurned){
+				currentMove = randomScrambleMove()
+			}
+			scramble[i] = currentMove;
+		}
+		return scramble;
 
 		/*hint: declare and initialize a String array with length numMoves. Then, generate the first random move
 		by calling randomScrambleMove(). Next, use a for loop to go through the rest of the moves, but resetting each
