@@ -223,8 +223,8 @@ public class OpenCvRaspberryPiCamera implements CubeColorInspector{
         color = convertFaceColorToIndex(center);
         return new char[][]{
                 {
-                        findColor(2000+offsetX,225+offsetY-50,150,100),
-                        findColor(2350+offsetX-25,530+offsetY-100,125,125),
+                        findColor(2000+offsetX,225+offsetY+100,150,100),
+                        findColor(2350+offsetX-25,530+offsetY+50,125,125),
                         findColor(2620+offsetX-50,720+offsetY + 100,70,50),
                 },
                 {
