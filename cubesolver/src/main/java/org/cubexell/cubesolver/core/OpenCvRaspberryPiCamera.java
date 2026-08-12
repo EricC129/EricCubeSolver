@@ -200,19 +200,19 @@ public class OpenCvRaspberryPiCamera implements CubeColorInspector{
         color = convertFaceColorToIndex(center);
         return new char[][]{//returns a 2 dimensional array of the colors of the back face
                 {//gets the color of the top-left piece of the back face. coordinates are of the top-left corner, width, and height.
-                        findColor(990+offsetX,730+offsetY-50,70,45),
-                        findColor(1160+offsetX,550+offsetY-50,175,60),
-                        findColor(1550+offsetX,200+offsetY-50,150,100),
+                        findColor(990+offsetX,730+offsetY+50,70,45),
+                        findColor(1160+offsetX,550+offsetY+50,175,60),
+                        findColor(1550+offsetX,200+offsetY+50,150,100),
                 },
                 {
-                        findColor(840+offsetX,1200+offsetY-50,120,150),
+                        findColor(840+offsetX,1200+offsetY+50,120,150),
                         center,
-                        findColor(1500+offsetX,650+offsetY-50,230,150)
+                        findColor(1500+offsetX,650+offsetY+50,230,150)
                 },
                 {
-                        findColor(730+offsetX,1725+offsetY-50,120,125),
-                        findColor(1025+offsetX,1500+offsetY-50,150,150),
-                        findColor(1490+offsetX,1100+offsetY-50,220,300)
+                        findColor(730+offsetX,1725+offsetY+50,120,125),
+                        findColor(1025+offsetX,1500+offsetY+50,150,150),
+                        findColor(1490+offsetX,1100+offsetY+50,220,300)
                 },
         };
     }
@@ -248,7 +248,7 @@ public class OpenCvRaspberryPiCamera implements CubeColorInspector{
                 {
                         findColor(2560+offsetX,2065+offsetY,250,80),
                         findColor(2120+offsetX,2170+offsetY,200,65),
-                        findColor(1940+offsetX,2265+offsetY,70,25),
+                        findColor(1940+offsetX-25,2265+offsetY-10,70,25),
                 },
                 {
                         findColor(2165+offsetX,1900+offsetY,375,125),
